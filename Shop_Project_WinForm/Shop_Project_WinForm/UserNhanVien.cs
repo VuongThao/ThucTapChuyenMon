@@ -154,7 +154,7 @@ namespace Shop_Project_WinForm
                     {
                         string query = "update NhanVien set TenNV= N'" + txnv.Text + "',ChucVu=N'" + txchucvu.Text + "',NgayVaoLam='" + txngayvaolm.Text + "',Luong='" + txluong.Text + "',Gmail='" + txgmail.Text + "',SDT='" + txsdt.Text + "' where MaNV='" + txmanv.Text + "'";
                         DataTable data = KetNoi.Instance.excuteQuery(query);
-                        MessageBox.Show("Sửa thành công");
+                        MessageBox.Show("Sửa thành công roi nhe ");
                         loadDl();
                     }
                     catch

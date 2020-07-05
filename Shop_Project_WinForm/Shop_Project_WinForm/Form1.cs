@@ -152,6 +152,11 @@ namespace Shop_Project_WinForm
             Process.Start("https://mail.google.com/mail/u/0/#inbox");
         }
 
+        private void gunaLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             try

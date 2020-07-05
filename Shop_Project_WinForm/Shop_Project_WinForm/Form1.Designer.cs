@@ -355,6 +355,7 @@
             this.gunaLabel8.Size = new System.Drawing.Size(87, 15);
             this.gunaLabel8.TabIndex = 19;
             this.gunaLabel8.Text = "0338269042";
+            this.gunaLabel8.Click += new System.EventHandler(this.gunaLabel8_Click);
             // 
             // guna2Button11
             // 
@@ -581,6 +582,7 @@
             // 
             // userSanPham1
             // 
+            this.userSanPham1.BackColor = System.Drawing.Color.MistyRose;
             this.userSanPham1.Location = new System.Drawing.Point(192, 153);
             this.userSanPham1.Margin = new System.Windows.Forms.Padding(2);
             this.userSanPham1.Name = "userSanPham1";
