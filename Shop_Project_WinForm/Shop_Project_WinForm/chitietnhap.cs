@@ -272,7 +272,7 @@ namespace Shop_Project_WinForm
             openDlg.RestoreDirectory = true;
             openDlg.Filter = "|*.xlsx";
 
-            //string path = openDlg.FileName;
+            //string path = openDlg.FileName
 
             if (openDlg.ShowDialog() == DialogResult.OK)
             {
