@@ -42,6 +42,7 @@ namespace Shop_Project_WinForm
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             userSanPham1.BringToFront();
+            
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -52,6 +53,9 @@ namespace Shop_Project_WinForm
         private void guna2Button12_Click(object sender, EventArgs e)
         {
             userPhieuNhap1.BringToFront();
+            userPhieuNhap1.LoadNV();
+            userPhieuNhap1.LoadNCC();
+            
         }
 
         private void guna2Button8_Click(object sender, EventArgs e)
@@ -84,6 +88,8 @@ namespace Shop_Project_WinForm
         {
             userHoaDon1.form = this;
             userHoaDon1.BringToFront();
+            userHoaDon1.LoadKh();
+            userHoaDon1.LoadNV();
             
         }
 

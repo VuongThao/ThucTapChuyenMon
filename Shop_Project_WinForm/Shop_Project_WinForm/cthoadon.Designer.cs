@@ -104,6 +104,7 @@
             this.txthanhtien.ShadowDecoration.Parent = this.txthanhtien;
             this.txthanhtien.Size = new System.Drawing.Size(127, 25);
             this.txthanhtien.TabIndex = 42;
+            this.txthanhtien.TextChanged += new System.EventHandler(this.txthanhtien_TextChanged);
             // 
             // gunaLabel14
             // 
@@ -112,7 +113,7 @@
             this.gunaLabel14.Location = new System.Drawing.Point(236, 89);
             this.gunaLabel14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel14.Name = "gunaLabel14";
-            this.gunaLabel14.Size = new System.Drawing.Size(67, 15);
+            this.gunaLabel14.Size = new System.Drawing.Size(65, 15);
             this.gunaLabel14.TabIndex = 40;
             this.gunaLabel14.Text = "Thành Tiền";
             // 
@@ -123,7 +124,7 @@
             this.gunaLabel13.Location = new System.Drawing.Point(12, 53);
             this.gunaLabel13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel13.Name = "gunaLabel13";
-            this.gunaLabel13.Size = new System.Drawing.Size(82, 15);
+            this.gunaLabel13.Size = new System.Drawing.Size(81, 15);
             this.gunaLabel13.TabIndex = 39;
             this.gunaLabel13.Text = "Tên Sản Phẩm";
             this.gunaLabel13.Click += new System.EventHandler(this.gunaLabel13_Click);
@@ -182,7 +183,7 @@
             this.gunaLabel3.Location = new System.Drawing.Point(12, 128);
             this.gunaLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(67, 15);
+            this.gunaLabel3.Size = new System.Drawing.Size(66, 15);
             this.gunaLabel3.TabIndex = 47;
             this.gunaLabel3.Text = "Kích Thước";
             // 

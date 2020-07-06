@@ -53,7 +53,12 @@
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.label1 = new System.Windows.Forms.Label();
+            this.attachment1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Button12
@@ -433,11 +438,60 @@
             this.label1.TabIndex = 74;
             this.label1.Text = "Chức năng";
             // 
+            // attachment1
+            // 
+            this.attachment1.BorderRadius = 15;
+            this.attachment1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.attachment1.DefaultText = "";
+            this.attachment1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.attachment1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.attachment1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.attachment1.DisabledState.Parent = this.attachment1;
+            this.attachment1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.attachment1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.attachment1.FocusedState.Parent = this.attachment1;
+            this.attachment1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.attachment1.HoverState.Parent = this.attachment1;
+            this.attachment1.Location = new System.Drawing.Point(304, 171);
+            this.attachment1.Margin = new System.Windows.Forms.Padding(4);
+            this.attachment1.Name = "attachment1";
+            this.attachment1.PasswordChar = '\0';
+            this.attachment1.PlaceholderText = "đường dẫn";
+            this.attachment1.SelectedText = "";
+            this.attachment1.ShadowDecoration.Parent = this.attachment1;
+            this.attachment1.Size = new System.Drawing.Size(139, 25);
+            this.attachment1.TabIndex = 81;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(261, 171);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 80;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(450, 171);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 79;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // UserNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.attachment1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.gunaSeparator1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gunaButton1);
@@ -462,6 +516,8 @@
             this.Size = new System.Drawing.Size(837, 470);
             this.Load += new System.EventHandler(this.UserNhaCungCap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,5 +549,8 @@
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox attachment1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

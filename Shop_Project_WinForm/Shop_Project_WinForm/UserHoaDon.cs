@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Web;
 using System.Net.Mail;
+using System.Globalization;
 
 namespace Shop_Project_WinForm
 {
@@ -45,7 +46,7 @@ namespace Shop_Project_WinForm
 
 
         }
-        private void LoadNV()
+        public void LoadNV()
         {
             string query = "select*from NhanVien";
             DataTable nhanvien = KetNoi.Instance.excuteQuery(query);
@@ -53,7 +54,7 @@ namespace Shop_Project_WinForm
             cbmnv.ValueMember = "MaNV";
             cbmnv.DisplayMember = "TenNV";
         }
-        private void LoadKh()
+        public void LoadKh()
         {
             string query = "select*from KhachHang";
             DataTable nhanvien = KetNoi.Instance.excuteQuery(query);
@@ -312,6 +313,15 @@ namespace Shop_Project_WinForm
             //    string picPath = open.FileName.ToString();
             //    attachment1.Text = picPath;
             //}
+        }
+
+        private void txtongtien_TextChanged(object sender, EventArgs e)
+        {
+
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = decimal.Parse(txtongtien.Text, System.Globalization.NumberStyles.AllowThousands);
+            txtongtien.Text = String.Format(culture, "{0:N0}", value);
+            txtongtien.Select(txtongtien.Text.Length, 0);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Shop_Project_WinForm
             LoatDL();
             LoadNhom();
         }
-        private void LoadNhom()
+        public void LoadNhom()
         {
             string query = "select*from nhomsanpham";
             DataTable nhomsp = KetNoi.Instance.excuteQuery(query);
@@ -309,6 +309,11 @@ namespace Shop_Project_WinForm
         private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
         {
             seachData(txttim.Text);
+        }
+
+        private void cbNhom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         //public void loadKichThuoc(string masp)

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using System.Net.Mail;
+using System.Web;
 
 namespace Shop_Project_WinForm
 {
@@ -185,6 +187,57 @@ namespace Shop_Project_WinForm
         private void UserNhaCungCap_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                string picPath = open.FileName.ToString();
+                attachment1.Text = picPath;
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (txmncc.Text == "")
+            {
+                MessageBox.Show(" Chọn thông tin nhé.");
+            }
+            else
+            {
+                try
+                {
+                    string query = "select GmailNCC from NhaCungCap where MaNCC=N'" + txmncc.Text + "'";
+
+
+                    DataTable data = KetNoi.Instance.excuteQuery(query);
+                    string to1 = data.Rows[0][0].ToString();
+                    string smtp1 = "smtp.gmail.com";
+                    string from1 = "duykhanhlb4999@gmail.com";
+                    string body1 = "Thông Tin Hàng Hóa Cần Đặt";
+                    string subject1 = "Chúc bạn một ngày may mắn";
+                    string username1 = "duykhanhlb4999@gmail.com";
+                    string password1 = "nguyenngocduykhanh";
+                    MailMessage mail = new MailMessage(from1, to1, subject1, body1);
+                    mail.Attachments.Add(new Attachment(attachment1.Text));
+                    SmtpClient client = new SmtpClient(smtp1);
+                    client.Port = 587;
+                    client.Credentials = new System.Net.NetworkCredential(username1, password1);
+                    client.EnableSsl = true;
+                    client.Send(mail);
+                    MessageBox.Show("Mail send", "success", MessageBoxButtons.OK);
+                    string pass = "1";
+                    //Form1 f = new Form1(pass);
+                }
+                catch
+                {
+                    MessageBox.Show(" Gửi không thành công ");
+                }
+
+
+            }
         }
     }
     }

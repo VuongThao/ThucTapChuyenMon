@@ -53,11 +53,6 @@
             this.gunaDataGridView3 = new Guna.UI.WinForms.GunaDataGridView();
             this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
             this.dtg1 = new Guna.UI.WinForms.GunaDataGridView();
-            this.cbmnv = new Guna.UI.WinForms.GunaComboBox();
-            this.cbtenkh = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.mahd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhToan1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +60,11 @@
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChiTiet = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cbmnv = new Guna.UI.WinForms.GunaComboBox();
+            this.cbtenkh = new Guna.UI.WinForms.GunaComboBox();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg1)).BeginInit();
             this.SuspendLayout();
@@ -267,6 +267,7 @@
             this.txtongtien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtongtien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtongtien.FocusedState.Parent = this.txtongtien;
+            this.txtongtien.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtongtien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtongtien.HoverState.Parent = this.txtongtien;
             this.txtongtien.Location = new System.Drawing.Point(405, 99);
@@ -278,6 +279,7 @@
             this.txtongtien.ShadowDecoration.Parent = this.txtongtien;
             this.txtongtien.Size = new System.Drawing.Size(139, 25);
             this.txtongtien.TabIndex = 47;
+            this.txtongtien.TextChanged += new System.EventHandler(this.txtongtien_TextChanged);
             // 
             // txtinhtrang
             // 
@@ -478,6 +480,56 @@
             this.dtg1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellClick);
             this.dtg1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellContentClick);
             // 
+            // mahd
+            // 
+            this.mahd.DataPropertyName = "MaHD";
+            this.mahd.HeaderText = "Mã Hóa Đơn";
+            this.mahd.MinimumWidth = 6;
+            this.mahd.Name = "mahd";
+            // 
+            // ThanhToan1
+            // 
+            this.ThanhToan1.DataPropertyName = "ThanhToan";
+            this.ThanhToan1.HeaderText = "Da thanh toan";
+            this.ThanhToan1.Name = "ThanhToan1";
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.DataPropertyName = "NgayLap";
+            this.NgayLap.HeaderText = "Ngày lập";
+            this.NgayLap.MinimumWidth = 6;
+            this.NgayLap.Name = "NgayLap";
+            // 
+            // TenNV
+            // 
+            this.TenNV.DataPropertyName = "TenNV";
+            this.TenNV.HeaderText = "Tên NV";
+            this.TenNV.MinimumWidth = 6;
+            this.TenNV.Name = "TenNV";
+            // 
+            // MaKH
+            // 
+            this.MaKH.DataPropertyName = "MaKH";
+            this.MaKH.HeaderText = "MaKH";
+            this.MaKH.MinimumWidth = 6;
+            this.MaKH.Name = "MaKH";
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng Tiền";
+            this.TongTien.MinimumWidth = 6;
+            this.TongTien.Name = "TongTien";
+            // 
+            // ChiTiet
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.NullValue = "chi tiết";
+            this.ChiTiet.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ChiTiet.HeaderText = "Chi Tiết";
+            this.ChiTiet.MinimumWidth = 6;
+            this.ChiTiet.Name = "ChiTiet";
+            // 
             // cbmnv
             // 
             this.cbmnv.BackColor = System.Drawing.Color.Transparent;
@@ -567,56 +619,6 @@
             this.gunaSeparator1.Size = new System.Drawing.Size(108, 10);
             this.gunaSeparator1.TabIndex = 67;
             this.gunaSeparator1.Thickness = 2;
-            // 
-            // mahd
-            // 
-            this.mahd.DataPropertyName = "MaHD";
-            this.mahd.HeaderText = "Mã Hóa Đơn";
-            this.mahd.MinimumWidth = 6;
-            this.mahd.Name = "mahd";
-            // 
-            // ThanhToan1
-            // 
-            this.ThanhToan1.DataPropertyName = "ThanhToan";
-            this.ThanhToan1.HeaderText = "Da thanh toan";
-            this.ThanhToan1.Name = "ThanhToan1";
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.DataPropertyName = "NgayLap";
-            this.NgayLap.HeaderText = "Ngày lập";
-            this.NgayLap.MinimumWidth = 6;
-            this.NgayLap.Name = "NgayLap";
-            // 
-            // TenNV
-            // 
-            this.TenNV.DataPropertyName = "TenNV";
-            this.TenNV.HeaderText = "Tên NV";
-            this.TenNV.MinimumWidth = 6;
-            this.TenNV.Name = "TenNV";
-            // 
-            // MaKH
-            // 
-            this.MaKH.DataPropertyName = "MaKH";
-            this.MaKH.HeaderText = "MaKH";
-            this.MaKH.MinimumWidth = 6;
-            this.MaKH.Name = "MaKH";
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng Tiền";
-            this.TongTien.MinimumWidth = 6;
-            this.TongTien.Name = "TongTien";
-            // 
-            // ChiTiet
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.NullValue = "chi tiết";
-            this.ChiTiet.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ChiTiet.HeaderText = "Chi Tiết";
-            this.ChiTiet.MinimumWidth = 6;
-            this.ChiTiet.Name = "ChiTiet";
             // 
             // UserHoaDon
             // 

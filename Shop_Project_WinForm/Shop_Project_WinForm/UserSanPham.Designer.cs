@@ -330,6 +330,7 @@
             this.cbNhom.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cbNhom.Size = new System.Drawing.Size(121, 26);
             this.cbNhom.TabIndex = 46;
+            this.cbNhom.SelectedIndexChanged += new System.EventHandler(this.cbNhom_SelectedIndexChanged);
             // 
             // gunaButton1
             // 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+
 using app = Microsoft.Office.Interop.Excel.Application;
 
 
@@ -67,6 +69,7 @@ namespace Shop_Project_WinForm
 
         private void cthoadon_Load(object sender, EventArgs e)
         {
+            txthanhtien.Enabled = false;
             LoatDL();
             LoadSP();
             cbsp.SelectedIndex = -1;
@@ -360,6 +363,15 @@ namespace Shop_Project_WinForm
         private void guna2VSeparator1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txthanhtien_TextChanged(object sender, EventArgs e)
+        {
+
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = decimal.Parse(txthanhtien.Text, System.Globalization.NumberStyles.AllowThousands);
+            txthanhtien.Text = String.Format(culture, "{0:N0}", value);
+            txthanhtien.Select(txthanhtien.Text.Length, 0);
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using app = Microsoft.Office.Interop.Excel.Application;
 
 namespace Shop_Project_WinForm
 {
@@ -63,6 +65,7 @@ namespace Shop_Project_WinForm
 
         private void chitietphieunhapcs_Load(object sender, EventArgs e)
         {
+            txthanhtien.Enabled = false;
             LoatDL();
             LoadSP();
             cbsp.SelectedIndex = -1;
@@ -251,5 +254,73 @@ namespace Shop_Project_WinForm
             string querry = "update PhieuNhap set TinhTrang = 1 where MaPN = '" + MaPN + "'";
             DataTable data = KetNoi.Instance.excuteQuery(querry);
         }
+
+        private void txthanhtien_TextChanged(object sender, EventArgs e)
+        {
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = decimal.Parse(txthanhtien.Text, System.Globalization.NumberStyles.AllowThousands);
+            txthanhtien.Text = String.Format(culture, "{0:N0}", value);
+            txthanhtien.Select(txthanhtien.Text.Length, 0);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog openDlg = new SaveFileDialog();
+            openDlg.InitialDirectory = @"D:\";
+            openDlg.FileName = "*.xlsx";
+            openDlg.DefaultExt = "xlsx";
+            openDlg.RestoreDirectory = true;
+            openDlg.Filter = "|*.xlsx";
+
+            //string path = openDlg.FileName;
+
+            if (openDlg.ShowDialog() == DialogResult.OK)
+            {
+                app obj = new app();
+                obj.Application.Workbooks.Add(Type.Missing);
+                obj.Columns.ColumnWidth = 18;
+                obj.StandardFontSize = 13;
+                Console.WriteLine(dtg1.RowCount);
+                obj.Cells[1, 1] = "SHOP QUAN ÁO AN BẢO";
+                obj.Cells[2, 1] = "380 Lê Văn Việt Quận 9 tp.Hồ chí Minh";
+                obj.Cells[3, 1] = "Số điện thoại: 0338269042";
+                obj.Cells[5, 3] = "THÔNG TIN HÓA ĐƠN";
+
+                obj.Rows[1].Font.Bold = true;
+                obj.Rows[2].Font.Bold = true;
+                obj.Rows[3].Font.Bold = true;
+                obj.Rows[5].Font.Bold = true;
+                obj.Rows[6].Font.Bold = true;
+                if (dtg1.Rows.Count > 0)
+                {
+                    for (int i = 1; i < dtg1.Columns.Count + 1; i++)
+                    {
+                        obj.Cells[6, i] = dtg1.Columns[i - 1].HeaderText;
+
+                    }
+                    for (int i = 0; i < dtg1.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dtg1.Columns.Count; j++)
+                        {
+                            if (dtg1.Rows[i].Cells[j].Value != null)
+                            {
+                                obj.Cells[7 + i, j + 1] = dtg1.Rows[i].Cells[j].Value.ToString();
+
+                            }
+                            else
+                            {
+                                obj.Cells[i + 7, j + 1] = "";
+                            }
+                        }
+                    }
+                    obj.ActiveWorkbook.SaveAs(openDlg.FileName);
+                    //obj.ActiveWorkbook.SaveAs(); 
+                    obj.ActiveWorkbook.Saved = true;
+                    MessageBox.Show(" xuat thah cong");
+                }
+            }
+        }
     }
 }
+    
+
