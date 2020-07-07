@@ -80,6 +80,8 @@ namespace Shop_Project_WinForm
             {
                 guna2Button4.Enabled = false;
                 guna2Button6.Enabled = false;
+                guna2Button12.Enabled = false;
+                
             }
             
         }
@@ -161,6 +163,15 @@ namespace Shop_Project_WinForm
         private void gunaLabel8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button8_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            FormLogin f = new FormLogin();
+            f.FormClosed += closeForm;
+            f.Show();
+            f.BringToFront();
         }
 
         private void timer2_Tick(object sender, EventArgs e)

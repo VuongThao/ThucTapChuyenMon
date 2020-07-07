@@ -70,6 +70,7 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(292, 260);
             this.guna2Panel1.TabIndex = 1;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // txmk
             // 
@@ -167,9 +168,9 @@
             this.gunaLabel1.Location = new System.Drawing.Point(105, 43);
             this.gunaLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(83, 32);
+            this.gunaLabel1.Size = new System.Drawing.Size(137, 32);
             this.gunaLabel1.TabIndex = 1;
-            this.gunaLabel1.Text = "LOGIN";
+            this.gunaLabel1.Text = "Đăng Nhập";
             // 
             // guna2ImageButton1
             // 

@@ -43,5 +43,10 @@ namespace Shop_Project_WinForm
         {
          
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

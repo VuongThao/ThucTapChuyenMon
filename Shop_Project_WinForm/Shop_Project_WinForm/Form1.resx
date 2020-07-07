@@ -279,6 +279,17 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
+  <data name="guna2Button8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAASBJREFUSEtj
+        GAUDBlatWsW2btYstZkzZ7JChcgDq/r6ONfNmaOzfubMAKCBJUA8ff2sWbvXzpp1D8j+A8T/V02dKgFV
+        jhtsmzSJb+3MmUZAzWFAXAnUOBeIDwDxE5AhaPjnupkzbwDpLUCLToDE8Fqyat48UaCiV1DNyPg7EF8H
+        s2fPPgikM4AGuqyfPl0BGETMUO0MQMsqQGrwWwKUBCkCe3/mzBQgdtwwb57s////GdfPny8AkgOKNUCV
+        YwCSLAEphgrBwaglGABmyfrZs5cCNYQiY2A8JYAdMHv2KnQ5GAbrI9YSSjFRlgCT5xxQEkXG0MwHSnmL
+        0OWQ8ByiLQF6fTR1kZC6aJrj6VF2wQBNS2FiANXqE3IB1WrGkQwYGADKnzUzqHTqQgAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIYAAAAvCAYAAAAmarK3AAAABGdBTUEAALGPC/xhBQAADsVJREFUeF7t
