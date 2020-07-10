@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 using System.Globalization;
 
 using app = Microsoft.Office.Interop.Excel.Application;
@@ -373,6 +374,95 @@ namespace Shop_Project_WinForm
             txthanhtien.Text = String.Format(culture, "{0:N0}", value);
             txthanhtien.Select(txthanhtien.Text.Length, 0);
         }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            string endpoint = "https://test-payment.momo.vn/gw_payment/transactionProcessor";
+            string partnerCode = "MOMOGYDM20200710";
+            string accessKey = "NOKj7ynHSggRg93Q";
+            string serectkey = "NAGP9J3tNFn1rg2OoQMc8oEQnRLr4M92";
+            string orderInfo = "";
+            string returnUrl = "https://momo.vn/return";
+            string notifyurl = "https://momo.vn/notify";
+            int tongTien = 0;
+            string thongtin = "";
+            for (int i = 0; i < dtg1.RowCount - 1; i++)
+            {
+                thongtin = thongtin + (string)dtg1[1, i].Value.ToString() + "/" + (string)dtg1[2, i].Value.ToString() + "/" + (string)dtg1[3, i].Value.ToString() + ".";
+                tongTien += (int)dtg1[5, i].Value;
+
+            }
+
+            string amount = tongTien.ToString();
+            orderInfo = thongtin.ToString();
+
+
+
+
+
+            // MessageBox.Show(testValue2.ToString());
+
+
+            string orderid = Guid.NewGuid().ToString();
+            string requestId = Guid.NewGuid().ToString();
+            string extraData = "";
+
+            //Before sign HMAC SHA256 signature
+            string rawHash = "partnerCode=" +
+                partnerCode + "&accessKey=" +
+                accessKey + "&requestId=" +
+                requestId + "&amount=" +
+                amount + "&orderId=" +
+                orderid + "&orderInfo=" +
+                orderInfo + "&returnUrl=" +
+                returnUrl + "&notifyUrl=" +
+                notifyurl + "&extraData=" +
+                extraData;
+
+            //log.Debug("rawHash = " + rawHash);
+
+
+
+
+            Momopay crypto = new Momopay();
+            //sign signature SHA256
+            string signature = crypto.signSHA256(rawHash, serectkey);
+            // log.Debug("Signature = " + signature);
+
+            //build body json request
+            JObject message = new JObject
+            {
+                { "partnerCode", partnerCode },
+                { "accessKey", accessKey },
+                { "requestId", requestId },
+                { "amount", amount },
+                { "orderId", orderid },
+                { "orderInfo", orderInfo },
+                { "returnUrl", returnUrl },
+                { "notifyUrl", notifyurl },
+                { "extraData", extraData },
+                { "requestType", "captureMoMoWallet" },
+                { "signature", signature }
+
+            };
+            //   log.Debug("Json request to MoMo: " + message.ToString());
+            string responseFromMomo = Pay.sendPaymentRequest(endpoint, message.ToString());
+
+            JObject jmessage = JObject.Parse(responseFromMomo);
+            //log.Debug("Return from MoMo: " + jmessage.ToString());
+            DialogResult result = MessageBox.Show(responseFromMomo, "Open in browser", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                //yes...
+                System.Diagnostics.Process.Start(jmessage.GetValue("payUrl").ToString());
+            }
+            else if (result == DialogResult.Cancel)
+            {
+                //no...
+            }
+        }
     }
 }
+    
+
 
