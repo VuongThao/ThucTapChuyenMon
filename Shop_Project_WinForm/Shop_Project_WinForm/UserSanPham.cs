@@ -17,6 +17,8 @@ namespace Shop_Project_WinForm
             InitializeComponent();
             LoatDL();
             LoadNhom();
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
         }
         public void LoadNhom()
         {
@@ -277,8 +279,7 @@ namespace Shop_Project_WinForm
                 Image image = new Bitmap(fileImage);
               
                 pictureBox1.BackgroundImage = image;
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
+            
             }
         }
 
@@ -312,6 +313,11 @@ namespace Shop_Project_WinForm
         }
 
         private void cbNhom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -371,7 +371,7 @@
             this.txtinhtrang.PlaceholderText = "tình trạng";
             this.txtinhtrang.SelectedText = "";
             this.txtinhtrang.ShadowDecoration.Parent = this.txtinhtrang;
-            this.txtinhtrang.Size = new System.Drawing.Size(102, 25);
+            this.txtinhtrang.Size = new System.Drawing.Size(140, 25);
             this.txtinhtrang.TabIndex = 61;
             this.txtinhtrang.TextChanged += new System.EventHandler(this.txtinhtrang_TextChanged);
             // 

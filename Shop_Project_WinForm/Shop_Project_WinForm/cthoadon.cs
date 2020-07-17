@@ -376,7 +376,12 @@ namespace Shop_Project_WinForm
         }
 
         private void gunaButton2_Click(object sender, EventArgs e)
+
         {
+
+            string querry = "update hoadon set thanhtoan = 1 where MaHD = '" + MaHD + "'";
+            DataTable data = KetNoi.Instance.excuteQuery(querry);
+
             string endpoint = "https://test-payment.momo.vn/gw_payment/transactionProcessor";
             string partnerCode = "MOMOGYDM20200710";
             string accessKey = "NOKj7ynHSggRg93Q";

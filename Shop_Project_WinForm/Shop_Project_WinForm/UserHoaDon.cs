@@ -83,11 +83,13 @@ namespace Shop_Project_WinForm
             LoadKh();
             LoatDL();
             txtongtien.ReadOnly = true;
+            txtongtien.Enabled = false;
+            txtinhtrang.Enabled = false;
             if (txtinhtrang.Text == "Đã thanh toan")
             {
                 btsua.Enabled = false;
                 btxoa.Enabled = false;
-                btthem.Enabled = false;
+               // btthem.Enabled = false;
             }
         
 
@@ -113,7 +115,7 @@ namespace Shop_Project_WinForm
                 txtinhtrang.Text = " Đã thanh toan";
                 btsua.Enabled = false;
                 btxoa.Enabled = false;
-                btthem.Enabled = false;
+                //btthem.Enabled = false;
 
 
             }
@@ -318,10 +320,10 @@ namespace Shop_Project_WinForm
         private void txtongtien_TextChanged(object sender, EventArgs e)
         {
 
-            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-            decimal value = decimal.Parse(txtongtien.Text, System.Globalization.NumberStyles.AllowThousands);
-            txtongtien.Text = String.Format(culture, "{0:N0}", value);
-            txtongtien.Select(txtongtien.Text.Length, 0);
+            //System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            //decimal value = decimal.Parse(txtongtien.Text, System.Globalization.NumberStyles.AllowThousands);
+            //txtongtien.Text = String.Format(culture, "{0:N0}", value);
+            //txtongtien.Select(txtongtien.Text.Length, 0);
         }
     }
 }

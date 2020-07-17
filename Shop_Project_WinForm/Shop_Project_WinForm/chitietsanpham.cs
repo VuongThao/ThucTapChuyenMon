@@ -21,7 +21,8 @@ namespace Shop_Project_WinForm
         {
             this.MaSanPham = masp;
             InitializeComponent();
-        //    txtMasp.ReadOnly = true;
+            //    txtMasp.ReadOnly = true;
+            txtsoluongton.Enabled = false;
 
         }
         private void LoadDuLieu()

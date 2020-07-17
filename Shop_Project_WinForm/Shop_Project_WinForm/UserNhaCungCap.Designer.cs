@@ -98,7 +98,7 @@
             this.txgmail.PlaceholderText = "gmail";
             this.txgmail.SelectedText = "";
             this.txgmail.ShadowDecoration.Parent = this.txgmail;
-            this.txgmail.Size = new System.Drawing.Size(94, 25);
+            this.txgmail.Size = new System.Drawing.Size(200, 25);
             this.txgmail.TabIndex = 34;
             // 
             // txsdt
@@ -121,7 +121,7 @@
             this.txsdt.PlaceholderText = "sđt";
             this.txsdt.SelectedText = "";
             this.txsdt.ShadowDecoration.Parent = this.txsdt;
-            this.txsdt.Size = new System.Drawing.Size(94, 25);
+            this.txsdt.Size = new System.Drawing.Size(200, 25);
             this.txsdt.TabIndex = 33;
             this.txsdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txsdt_KeyPress);
             // 

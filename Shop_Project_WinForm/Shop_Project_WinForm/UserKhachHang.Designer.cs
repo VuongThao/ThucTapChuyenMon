@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserKhachHang));
             this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
             this.txngaysinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -118,7 +118,7 @@
             this.txsdt.PlaceholderText = "sđt";
             this.txsdt.SelectedText = "";
             this.txsdt.ShadowDecoration.Parent = this.txsdt;
-            this.txsdt.Size = new System.Drawing.Size(176, 25);
+            this.txsdt.Size = new System.Drawing.Size(213, 25);
             this.txsdt.TabIndex = 35;
             this.txsdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txsdt_KeyPress);
             // 
@@ -143,7 +143,7 @@
             this.txgmail.PlaceholderText = "gmail";
             this.txgmail.SelectedText = "";
             this.txgmail.ShadowDecoration.Parent = this.txgmail;
-            this.txgmail.Size = new System.Drawing.Size(176, 25);
+            this.txgmail.Size = new System.Drawing.Size(213, 25);
             this.txgmail.TabIndex = 34;
             // 
             // txtkh
@@ -167,7 +167,7 @@
             this.txtkh.PlaceholderText = "tên khách hàng";
             this.txtkh.SelectedText = "";
             this.txtkh.ShadowDecoration.Parent = this.txtkh;
-            this.txtkh.Size = new System.Drawing.Size(176, 25);
+            this.txtkh.Size = new System.Drawing.Size(213, 25);
             this.txtkh.TabIndex = 31;
             // 
             // txmkh
@@ -191,7 +191,7 @@
             this.txmkh.PlaceholderText = "mã khách hang";
             this.txmkh.SelectedText = "";
             this.txmkh.ShadowDecoration.Parent = this.txmkh;
-            this.txmkh.Size = new System.Drawing.Size(176, 25);
+            this.txmkh.Size = new System.Drawing.Size(213, 25);
             this.txmkh.TabIndex = 30;
             this.txmkh.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
@@ -252,20 +252,20 @@
             // 
             // dtg1
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
-            this.dtg1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.dtg1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtg1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtg1.BackgroundColor = System.Drawing.Color.White;
             this.dtg1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtg1.ColumnHeadersHeight = 45;
             this.dtg1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKH,
@@ -273,14 +273,14 @@
             this.NgaySinh,
             this.SDT,
             this.GmailKH});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtg1.EnableHeadersVisualStyles = false;
             this.dtg1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
             this.dtg1.Location = new System.Drawing.Point(16, 324);
@@ -544,7 +544,7 @@
             this.attachment1.PlaceholderText = "đường dẫn";
             this.attachment1.SelectedText = "";
             this.attachment1.ShadowDecoration.Parent = this.attachment1;
-            this.attachment1.Size = new System.Drawing.Size(139, 25);
+            this.attachment1.Size = new System.Drawing.Size(213, 25);
             this.attachment1.TabIndex = 72;
             // 
             // UserKhachHang

@@ -19,6 +19,7 @@ namespace Shop_Project_WinForm
         {
             InitializeComponent();
             loadDl();
+            txmkh.Enabled = false;
         }
         public void loadDl()
         {

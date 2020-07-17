@@ -136,6 +136,7 @@
             this.dtg1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(206)))));
             this.dtg1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dtg1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellClick);
+            this.dtg1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellContentClick);
             // 
             // MaNhanVien
             // 
@@ -353,7 +354,7 @@
             this.txluong.PlaceholderText = "lương";
             this.txluong.SelectedText = "";
             this.txluong.ShadowDecoration.Parent = this.txluong;
-            this.txluong.Size = new System.Drawing.Size(94, 25);
+            this.txluong.Size = new System.Drawing.Size(141, 25);
             this.txluong.TabIndex = 11;
             this.txluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txluong_KeyPress);
             // 
@@ -377,7 +378,7 @@
             this.txgmail.PlaceholderText = "gmail";
             this.txgmail.SelectedText = "";
             this.txgmail.ShadowDecoration.Parent = this.txgmail;
-            this.txgmail.Size = new System.Drawing.Size(94, 25);
+            this.txgmail.Size = new System.Drawing.Size(141, 25);
             this.txgmail.TabIndex = 12;
             // 
             // txsdt
@@ -400,7 +401,7 @@
             this.txsdt.PlaceholderText = "sđt";
             this.txsdt.SelectedText = "";
             this.txsdt.ShadowDecoration.Parent = this.txsdt;
-            this.txsdt.Size = new System.Drawing.Size(94, 25);
+            this.txsdt.Size = new System.Drawing.Size(141, 25);
             this.txsdt.TabIndex = 13;
             this.txsdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txsdt_KeyPress);
             // 

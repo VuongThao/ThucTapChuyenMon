@@ -167,6 +167,15 @@ namespace Shop_Project_WinForm
 
         private void guna2Button8_Click_1(object sender, EventArgs e)
         {
+            //this.Visible = false;
+            //FormLogin f = new FormLogin();
+            //f.FormClosed += closeForm;
+            //f.Show();
+            //f.BringToFront();
+        }
+
+        private void guna2Button8_Click_2(object sender, EventArgs e)
+        {
             this.Visible = false;
             FormLogin f = new FormLogin();
             f.FormClosed += closeForm;
@@ -190,7 +199,9 @@ namespace Shop_Project_WinForm
                 }
 
             }
-            catch(Exception ex) { }
+            catch { 
+
+            }
         }
 
         private void gunaLabel4_Click(object sender, EventArgs e)
