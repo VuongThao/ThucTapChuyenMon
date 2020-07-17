@@ -4,6 +4,7 @@ I. Công nghệ sử dụng:
   - Microsoft SQL Server 2019
   - UI Framework Guna trong C#
   - Ứng dụng thanh toán MoMo trong thanh toán hóa đơn.
+  
  II. Các chức năng đã hoàn thiện
   - Đã hoàn thiện các chức năng đã đăng kí trong mục tiêu đề tài bao gồm:
   + Quản lý được nhân viên, khách hàng, nhà cung cấp,sản phẩm, nhóm sản phẩm, hóa đơn, phiếu nhập.
